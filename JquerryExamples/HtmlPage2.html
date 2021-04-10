@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("div tr td").mouseover(function () {
+                $(this).css("background-color", "red");
+            });
+            $("div tr td").mouseout(function () {
+                $(this).css("background-color", "white");
+            });
+            $("input,select,textarea").focus(function () {
+                $(this).css("background-color", "red");
+                $(this).css("color", "yellow");
+                $(this).parent().parent().css("background-color", "yellow");
+                $(this).parent().parent().children().css("font-weight", "bolder"); 
+            });
+            //$("input,select,textarea").blur(function () {
+            //    $(this).css("background-color", "white");
+            //    $(this).css("color", "black");
+            //    $(this).parent().parent().css("background-color", "white");
+            //    if ($(this).val() == "")
+            //        $(this).parent().find("div").show("slow");
+            //    else
+            //        $(this).parent().find("div").hide("slow");
+            //});
+            $("#btnregister").click(function () {
+                if ($("#txtName").val() == "")
+                    $("#dvName").show("slow");
+                else
+                    $("#dvName").hide("slow");
+            });
+        });
+    </script>
+</head>
+<body>
+   
+        <table widh="100%">
+            <tr>
+                <td>Welcome to Jquery</td>
+            </tr>
+        </table>
+        <div>
+            <table border="0" width="100%" height="700px">
+                <tr height="100px">
+                    <td rowspan="3" width="10%"> </td>
+                    <td colspan="2">
+                        <table border="0" width="100%">
+                            <tr>
+                                <td>
+                                    <img src="maxresdefault.jpg" width="100px" />
+                                </td>
+                                <td align="center">
+                                    <font size="7" color="red">  Welcome to Web Engineering</font>
+                                </td>
+                                <td>
+                                    <img align="right" src="maxresdefault.jpg" width="100px" />
+                                </td>
+                            </tr>
+                        </table>
+
+
+
+                    </td>
+                    <td rowspan="3" width="10%"> </td>
+                </tr>
+                <tr height="*">
+                    <td width="20%" valign="top">
+                        <table border="1" width="100%" cellpadding="5" cellspacing="5">
+                            <tr>
+                                <td>
+                                    <a href="home.html">Home</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="About.html">About </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="Contact.html">Contact Us</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="Register.html">Register</a>
+                                </td>
+                            </tr>
+                        </table>
+
+
+
+                    </td>
+                    <td valign="top">
+                         <!--<form id="frm" action="" method="get">-->
+                            <table border="1" width="100%" cellpadding="5">
+                                <tr>
+                                    <td >
+                                        Please Enter your name
+                                    </td>
+                                    <td>
+                                        <input type="text" id="txtName"name="txtName" />
+                                        <div id="dvName" style="color:red;display:none">Name is missing</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Please Enter your password
+                                    </td>
+                                    <td>
+                                        <input type="password" />
+                                        <div id="dvPass" style="color:red;display:none">Password is missing</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Please  select gender
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="gender" />Male
+                                        <input type="radio" name="gender" />Female
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Please  select fav color
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" />Blue
+                                        <input type="checkbox" />Green
+                                        <input type="checkbox" />Yellow
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        select your DOB
+                                    </td>
+                                    <td>
+                                        <input type="date" />
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        select your Month
+                                    </td>
+                                    <td>
+                                        <input type="month" />
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        select your week
+                                    </td>
+                                    <td>
+                                        <input type="week" />
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        select your number
+                                    </td>
+                                    <td>
+                                        <input type="number" />
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        select your range
+                                    </td>
+                                    <td>
+                                        <input type="range" />
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        select your color
+                                    </td>
+                                    <td>
+                                        <input type="color" />
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        select your date time
+                                    </td>
+                                    <td>
+                                        <input type="datetime-local" />
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        select your email
+                                    </td>
+                                    <td>
+                                        <input type="email" />
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        select your file
+                                    </td>
+                                    <td>
+                                        <input type="file" />
+
+                                    </td>
+                                </tr>
+                                <tr>
+
+
+                                    <td>
+                                        Button
+                                    </td>
+                                    <td>
+                                        <input type="button" id="btnregister" value="Submit"/>
+                                        <input type="reset" />
+                                    </td>
+                                </tr>
+                            </table>
+                        <!--</form>-->
+                    </td>
+                </tr>
+                <tr height="100px">
+                    <td colspan="2" align="right" valign="bottom">
+                        CopyRight @  NED University Feb 2021
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+
+</body>
+</html>

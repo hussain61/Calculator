@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnhide").click(function () {
+                $("#dvFirst").hide("slow", function () {
+                    $("#dvSecond").hide("slow", function () {
+                        $("#dvThird").hide("slow")
+                    });
+                });
+             });
+            $("#btnshow").click(function () {
+                $("#dvFirst").show("slow", function () {
+                    $("#dvSecond").show("slow", function () {
+                        $("#dvThird").show("slow")
+                    });
+                });
+                
+            });
+            $("#btntoggle").click(function () {
+                $("#dvFirst").toggle("slow", function () {
+                    $("#dvSecond").toggle("slow", function () {
+                        $("#dvThird").toggle("slow")
+                    });
+
+                });
+            });
+            $("#btnFadeOut").click(function () {
+                $("#dvFirst").fadeOut("slow", function () {
+                    $("#dvSecond").fadeOut("slow", function () {
+                        $("#dvThird").fadeOut("slow")
+                    });
+
+                });
+            });
+            $("#btnFadeIn").click(function () {
+                $("#dvFirst").fadeIn("slow", function () {
+                    $("#dvSecond").fadeIn("slow", function () {
+                        $("#dvThird").fadeIn("slow")
+                    });
+
+                });
+            });
+            $("#btnFadetoggle").click(function () {
+                $("#dvFirst").fadeToggle("slow", function () {
+                    $("#dvSecond").fadeToggle("slow", function () {
+                        $("#dvThird").fadeToggle("slow")
+                    });
+
+                });
+            });
+            $("#btnchange").change(function () {
+                var value = $(this).val();
+                $("div").css("border-radius", value + "%");
+               
+                value = value / 100.0;
+                $("div").fadeTo("slow",value);
+            });
+            $("#btnslideup").click(function () {
+                $("#dvFirst").slideUp("slow", function () {
+                    $("#dvSecond").slideUp("slow", function () {
+                        $("#dvThird").slideUp("slow")
+                    });
+
+                });
+            });
+            $("#btnslidedown").click(function () {
+                $("#dvFirst").slideDown("slow", function () {
+                    $("#dvSecond").slideDown("slow", function () {
+                        $("#dvThird").slideDown("slow")
+                    });
+
+                });
+            });
+            $("#btnslidetoggle").click(function () {
+                $("#dvFirst").slideToggle("slow", function () {
+                    $("#dvSecond").slideToggle("slow", function () {
+                        $("#dvThird").slideToggle("slow")
+                    });
+
+                }); 
+            });
+            $("#Dance").click(function () {
+                $("div").hide("slow")
+                        .show("slow")
+                    .fadeOut("slow")
+                    .fadeIn("slow")
+                    .slideUp("slow")
+                    .slideDown("slow")
+                    .fadeTo("slow", .5)
+                    .fadeTo("slow", 1)  
+    
+                    ;
+               
+            });
+
+              
+});
+           
+          
+        
+       
+    </script>   
+    <style type="text/css" >
+        #dvFirst{
+            background-color:red;
+            width:100%;
+            height:200px;
+        }
+        #dvSecond {
+            background-color: blue;
+            width: 100%;
+            height: 200px;
+        }   
+        #dvThird {
+            background-color: yellow;
+            width: 100%;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btnshow">Show</button>
+    <button id="btnhide">Hide</button>
+    <button id="btntoggle">Toggle</button>
+    <button id="btnFadeOut">Fade Out</button>
+    <button id="btnFadeIn">Fade In</button>
+    <button id="btnFadetoggle">Fade Toggle</button>
+    <button id="btnslideup">Slide Up</button>
+    <button id="btnslidedown">Slide Down</button>
+    <button id="btnslidetoggle">Slide Toggle</button>
+    <button id="Dance">Dance</button>
+    <input type="range" id="btnchange" />
+    <div id="dvFirst"></div>
+    <div id="dvSecond"></div>
+    <div id="dvThird"></div>
+
+</body>
+</html>

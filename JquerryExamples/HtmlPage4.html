@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        #dvSecond{
+            position:relative;
+            left:800px;
+            top:200px;
+            transform:scale(2,2);
+        }   
+    </style>
+    <script src="jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        $("document").ready(function () {
+            $("#dvFirst").mouseover(function () {
+                var dvFirstHTML = $("#dvFirst").html();
+                $("#dvSecond").html(dvFirstHTML);
+            });
+            $("#dvFirst").mouseout(function () {
+               $("#dvSecond").html("");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="dvFirst">
+        <img src="maxresdefault.jpg" width="20%" height="20%" />
+    </div>
+    <div id="dvSecond">
+
+    </div>
+</body>
+</html>

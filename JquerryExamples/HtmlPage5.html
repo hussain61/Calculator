@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        #dvFirst{
+            width: 100%;
+            height: 600px;
+            background-color: red;
+            border-radius: 100% 0 100% 0;
+            opacity: 0.5;
+        }
+
+        #dvSecond{
+            width: 100%;
+            height: 600px;
+            background-color: blue;
+            border-radius: 0 100% 0 100%;
+            position: relative;
+            top: -600px;
+            opacity: 0.5;
+        }
+        #dvThird {
+            width: 100%;
+            height: -800px;
+            background-color: red;
+            border-radius: 100% 0 100% 0;
+            top: -1200px;
+            opacity: 0.5;
+        }
+
+        #dvFourth {
+            width: 100%;
+            height: 600px;
+            background-color: blue;
+            border-radius: 0 100% 0 100%;
+            position: relative;
+            top: -600px;
+            opacity: 0.5;
+        }
+    </style>
+    <script src="jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        $("document").ready(function () {
+            $("#btnclosedvfirst").click(function () {
+                $("#dvFirst").hide("slow");
+            });
+            $("#btnclosedvsecond").click(function () {
+                $("#dvSecond").hide("slow");
+            });
+            $("#btnclosedvthird").click(function () {
+                $("#dvThird").hide("slow");
+            });
+            $("#btnclosedvfourth").click(function () {
+                $("#dvFourth").hide("slow");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="dvFirst">
+        <input type="button" id="btnclosedvfirst" value="X" />
+    </div>
+    <div id="dvSecond">
+        <input type="button" id="btnclosedvsecond" value="X" />
+    </div>
+    <div id="dvThird">
+        <input type="button" id="btnclosedvthird" value="X" />
+    </div>
+    <div id="dvFourth">
+        <img src="maxresdefault.jpg" />
+        <input type="button" id="btnclosedvfourth" value="X" />
+    </div>
+</body>
+</html>

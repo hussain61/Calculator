@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#btnAddNewRow").click(function () {
+                var name = $("#txtUserName").val();
+                var password = $("#txtUserPassword").val();
+
+                $("#tbl2").append("<tr><td>" + name + "</td><td>" + password + "</td></tr>");
+                $("#tbl2").find("tr:odd").css("background-color", "lightblue");
+                $("#tbl2").find("tr:even").css("background-color", "lightgreen");
+                $("#tbl2").find("tr:first").css("background-color", "lightcoral");
+                $("#tbl2").find("tr:last").css("background-color", "lightcoral");
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <table width="100%" border="1" cellpadding="5">
+        <tr>
+            <td>
+                User Name
+            </td>
+            <td>
+                <input type="text" id="txtUserName" />
+            </td>
+            <td>
+                User Password
+            </td>
+            <td>
+                <input type="password" id="txtUserPassword" />
+            </td>
+            <td>
+                <input type="button" id="btnAddNewRow" value="AddNewRow " />
+            </td>
+        </tr>
+    </table>
+    <hr />
+    <table id="tbl2" width="100%" border="1">
+        <tr>
+            <th>
+                User Name
+            </th>
+            <th>
+                Password
+            </th>
+        </tr>
+    </table>
+</body>
+</html>
